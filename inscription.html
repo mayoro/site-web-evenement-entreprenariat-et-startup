@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscriptions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien vers la bibliothèque Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form">
+        <h1>Formulaire d'Inscription</h1>
+        
+        
+        <form action="inscription_traitement.php" method="POST">
+
+            <!-- Section 1: Informations personnelles -->
+            <h2>Informations personnelles</h2>
+            
+      
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe" required>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Autre">Autre</option>
+            </select>
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+            <label for="adresse">Adresse postale :</label>
+            <textarea id="adresse" name="adresse" rows="4" required></textarea>
+            <label for="email">Adresse courriel :</label>
+            <input type="email" id="email" name="email" required>
+    
+            
+            <!-- Section 2: Informations professionnelles -->
+            
+           <h2>Informations professionnelles</h2>
+            
+            
+           <label for="entreprise">Entreprise/Organisation :</label>
+           <input type="text" id="entreprise" name="entreprise" required>
+           <label for="poste">Titre du poste :</label>
+           <input type="text" id="poste" name="poste" required>
+           <label for="secteur">Secteur d'activité :</label>
+           <input type="text" id="secteur" name="secteur" required>
+    
+            
+    
+            <!-- Section 3: Sélection du type de billet -->
+            
+            <h2>Type de billet</h2>
+
+            <label for="billet">Sélectionnez votre billet :</label>
+            <select id="billet" name="billet" required>
+            <option value="Standard">Standard - 50$</option>
+            <option value="VIP">VIP - 100$</option>
+            <option value="Étudiant">Étudiant - 25$</option>
+            </select>
+            <label for="promo">Code promo :</label>
+            <input type="text" id="promo" name="promo">
+    
+            
+            <!-- Section 4: Mode de paiement -->
+
+            <h2>Mode de paiement</h2>
+            
+            <label for="paiement">Choisissez votre mode de paiement :</label>
+            <select id="paiement" name="paiement" required>
+            <option value="Carte bancaire">Carte bancaire</option>
+            <option value="Paypal">Paypal</option>
+            <option value="Virement bancaire">Virement bancaire</option>
+            </select>
+    
+            
+            <!-- Boutons -->
+            
+           <div class="button-group">
+                
+           <input type="submit" value="Soumettre l'inscription">
+           <input type="reset" value="Réinitialiser le formulaire">
+            
+           </div>
+        </form>
+    
+    
+        
+        
+          <!-- Section 5: Liste des prix des billets -->
+
+        <h2>Liste des prix des billets</h2>
+        
+        <table>
+            <thead>
+               <tr>
+                    <th>Catégorie</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                
+               </tr>
+    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard</td>
+                    <td>Accès à toutes les sessions et ateliers</td>
+                    <td>50$</td>
+                </tr>  
+                <tr>
+                    
+                    <td>VIP</td>
+                    <td>Accès à toutes les sessions, ateliers et espace VIP</td>
+                    <td>100$</td>
+                
+                </tr>
+                <tr>
+                    <td>Étudiant</td>
+                    <td>Accès à toutes les sessions (avec justificatif étudiant)</td>
+                    <td>25$</td>
+                
+                </tr>
+    
+            
+            </tbody>
+        
+        </table>
+    
+    </div>
+    
+ </body>
+    
